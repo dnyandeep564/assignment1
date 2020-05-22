@@ -1,9 +1,9 @@
 
 <?xml version="1.0"?>
 <launch>
-    <!--node pkg="rosbag" type="play" name="player" args="--clock $(find centre_detector)/bags/image.bag --loop"-->
+    <!--node pkg="rosbag" type="play" name="player" args="--clock $(find centre_detector)/bags/image.bag --loop">
         <remap from="/magnus/camera/image_raw" to="image_raw"/>
-    </node>
+    </node-->
 
     <rosparam file="$(find find_centre)/cfg/params.yaml" command="load"/>
 
