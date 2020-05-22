@@ -42,7 +42,7 @@ int main (int argc, char** argv)
     
     ros::Rate loop_rate(rate);
     
-    ros::Subscriber img_sub = nh.subscribe("image_raw", 1, imgCallback);
+    ros::Subscriber img_sub = nh.subscribe("/magnus/camera/image_raw", 1, imgCallback);
     
     ros::Publisher centre_pub = nh.advertise<find_centre::Centre>("findc/centre", 1);
     ros::Publisher thresh_pub = nh.advertise<sensor_msgs::Image>("findc/thresh", 1);
