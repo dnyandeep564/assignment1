@@ -9,6 +9,26 @@ add_definitions(-std=c++17)
 set(CMAKE_BUILD_TYPE Release)
 
 find_package(OpenCV 3 REQUIRED)
+
+add_message_files(
+  FILES
+  Centre.msg
+#   Message1.msg
+#   Message2.msg
+)
+
+# generate_messages(
+   DEPENDENCIES
+   std_msgs
+)
+
+catkin_package(
+#  INCLUDE_DIRS include
+#  LIBRARIES beginner_tutorials
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+#  DEPENDS system_lib
+)  
+   
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 #############
