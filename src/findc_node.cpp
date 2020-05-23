@@ -2,7 +2,7 @@
 #include <std_msgs/Header.h>
 #include <sensor_msgs/Image.h>
 #include <cv_bridge/cv_bridge.h>
-#include <centre_detector/Centre.h>
+#include <find_centre/Centre.h>
 
 cv::Mat input_image;
 
