@@ -17,7 +17,7 @@ void imgCallback(const sensor_msgs::Image& msg)
     }
     catch(cv_bridge::Exception& error)
     {
-        ROS_ERROR ("cv_bridge exception: %s", err.what());
+        ROS_ERROR ("cv_bridge exception: %s", error.what());
     }
     return;
 }
